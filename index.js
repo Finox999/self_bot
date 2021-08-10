@@ -2,6 +2,7 @@
 //MAKASIH DAH PAKE 
 //   -    y    -    \\
 //--Recode By Fino--\\
+//--Thanks to Hexagonz--\\
 const
 	{
 		WAConnection,
