@@ -56,6 +56,9 @@ const { webp2mp4File} = require('./lib/webp2mp4')
 const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
 const afk = JSON.parse(fs.readFileSync('./lib/off.json'))
 const { sleep, isAfk, cekafk, addafk } = require('./lib/offline')
+const setiker = JSON.parse(fs.readFileSync('./lib/stik.json'))
+const imagenye = JSON.parse(fs.readFileSync('./lib/img.json'))
+const audionye = JSON.parse(fs.readFileSync('./lib/vn.json'))
 const antilink = JSON.parse(fs.readFileSync('./lib/antilink.json'))
 const { jadibot, stopjadibot, listjadibot } = require('./lib/jadibot')
 const vcard = 'BEGIN:VCARD\n' //jangan ganti eror jngn nyesel
@@ -598,6 +601,17 @@ switch (command) {
 ┣ ◩ _${prefix}fast_
 ┣ ◩ _${prefix}reverse_
 ┣ ◩ _${prefix}tourl_
+┗━━━━━━━━ ❑
+
+
+   *[ 𝙶𝙴𝚃 𝙸𝙼𝙶, 𝚅𝙽, 𝚂𝚃𝙸𝙺 ]*
+┏━━━━━━━ ❒
+┣ ◩ _${prefix}getvn_
+┣ ◩ _${prefix}listvn_
+┣ ◩ _${prefix}getstik_
+┣ ◩ _${prefix}liststik_
+┣ ◩ _${prefix}getimg_
+┣ ◩ _${prefix}listimg
 ┗━━━━━━━━ ❑
 
 
@@ -3907,6 +3921,112 @@ case 'donasi':
   donasi = `Gopay: 088210864298 \nPulsa: 088210864298 or +62 878-9444-0175`
   hexa.sendMessage(from, donasi, text, {quoted:ftoko})
   break
+case 'addvn':
+				if (!isQuotedAudio) return reply('Reply vnnya')
+				svst = body.slice(7)
+				if (!svst) return reply('Nama audionya apa')
+				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await hexa.downloadMediaMessage(boij)
+				audionye.push(`${svst}`)
+				fs.writeFileSync(`./lib/audio/${svst}.mp3`, delb)
+				fs.writeFileSync('./lib/vn.json', JSON.stringify(audionye))
+				hexa.sendMessage(from, `Sukses Menambahkan Audio\nCek dengan cara ${prefix}listvn`, MessageType.text, { quoted: mek })
+				break
+
+			case 'getvn':
+				namastc = body.slice(7)
+				try {
+				buffer = fs.readFileSync(`./lib/audio/${namastc}.mp3`)
+				hexa.sendMessage(from, buffer, audio, { mimetype: 'audio/mp4', quoted: mek, ptt: false })
+				} catch {
+				  reply('Pack tidak terdaftar')
+				}
+				break
+
+			case 'listvn':
+			case 'vnlist':
+				teks = '*List Vn:*\n\n'
+				for (let awokwkwk of audionye) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total : ${audionye.length}*\nGunakan perintah\n*${prefix}getvn (nama pack)*\nuntuk mengambil vn`
+				hexa.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": audionye } })
+				break
+			  case 'getstik':
+				var itsme = `0@s.whatsapp.net`
+				var split = `${cr}`
+				var selepbot = {
+					contextInfo: {
+						participant: itsme,
+						quotedMessage: {
+							extendedTextMessage: {
+								text: split,
+							}
+						}
+					}
+				}
+				namastc = body.slice(9)
+				try {
+				result = fs.readFileSync(`./lib/sticker/${namastc}.webp`)
+				hexa.sendMessage(from, result, sticker, selepbot)
+				} catch {
+				  reply('Pack tidak terdaftar')
+				}
+				break
+			
+			
+			
+			case 'liststik':
+				teks = '*Sticker list :*\n\n'
+				for (let awokwkwk of setiker) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total : ${setiker.length}*\nGunakan perintah\n*${prefix}getstik (nama pack)*\nuntuk mengambil stiker`
+				hexa.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setiker } })
+				break
+			case 'addstik':
+				if (!isQuotedSticker) return reply('Reply stiker nya')
+				
+				svst = body.slice(9)
+				if (!svst) return reply('Nama sticker nya apa?')
+				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await hexa.downloadMediaMessage(boij)
+				setiker.push(`${svst}`)
+				fs.writeFileSync(`./lib/sticker/${svst}.webp`, delb)
+				fs.writeFileSync('./lib/stik.json', JSON.stringify(setiker))
+				hexa.sendMessage(from, `Sukses Menambahkan Sticker\nCek dengan cara ${prefix}liststik`, MessageType.text, { quoted: mek })
+				break
+case 'addimg':
+				if (!isQuotedImage) return reply('Reply imagenya')
+				
+				svst = body.slice(8)
+				if (!svst) return reply('Nama imagenya apa')
+				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await hexa.downloadMediaMessage(boij)
+				imagenye.push(`${svst}`)
+				fs.writeFileSync(`./lib/image/${svst}.jpeg`, delb)
+				fs.writeFileSync('./lin/img.json', JSON.stringify(imagenye))
+				hexa.sendMessage(from, `Sukses Menambahkan Video\nCek dengan cara ${prefix}listimage`, MessageType.text, { quoted: mek })
+				break
+
+			case 'getimg':
+				namastc = body.slice(8)
+				try {
+				buffer = fs.readFileSync(`./lib/image/${namastc}.jpeg`)
+				hexa.sendMessage(from, buffer, image, { quoted: mek, caption: `Result From Database : ${namastc}.jpeg` })
+				} catch {
+				  reply('Pack tidak terdaftar')
+				}
+				break
+				
+			case 'listimg':
+				teks = '*List Image :*\n\n'
+				for (let awokwkwk of imagenye) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total : ${imagenye.length}*\nGunakan perintah\n*${prefix}getimg (nama pack)*\nuntuk mengambil gambar`
+				hexa.sendMessage(from, teks.trim(), extendedText, { quoted: ftoko, contextInfo: { "mentionedJid": imagenye } })
+				break
    //---end---\\
 
 
