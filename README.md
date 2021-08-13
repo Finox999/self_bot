@@ -3,6 +3,21 @@ self bot Made in Me
 
 Base bot? [`Hexagonz`](https://github.com/hexagonz/SELF-HX)
 
+# TOOLS
+### Tools
+Aplikasi untuk menjalankan dan mempermudah mengedit keperluan bot, Kalian bisa download aplikasi di bawah pada PlayStore.
+
+| Aplikasi | Link |
+|--------|--------|
+| **Termux** | [Download disini](https://play.google.com/store/apps/details?id=com.termux) |
+| **Acode** | [Download disini](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree) |
+<p align="center">
+  <div align="center">
+ <code><img height="40" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
+ <code><img height="40" src="https://user-images.githubusercontent.com/72728486/108440991-c9196180-7286-11eb-910e-d95691565ec8.png"></code>
+
+  </div>
+  </p>
 
 
 # Cara install(How to install)(Termux)
