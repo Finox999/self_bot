@@ -4,8 +4,8 @@ self bot Made in Me
 Base bot? [`Hexagonz`](https://github.com/hexagonz/SELF-HX)
 
 # TOOLS
-### Tools
-Aplikasi untuk menjalankan dan mempermudah mengedit keperluan bot, Kalian bisa download aplikasi di bawah pada PlayStore.
+Download termux untuk install dan jalankan bot
+Download acode untuk mengedit ownerNumber/Keperluan lain nya
 
 | Aplikasi | Link |
 |--------|--------|
