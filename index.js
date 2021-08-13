@@ -77,14 +77,12 @@ numbernye = '0'
 waktu = '-'
 alasan = '-'
 namabot = '𝙿𝚈𝚃𝙷𝙾𝙽 𝙱𝙾𝚃菲诺'
-lolkey = 'DestaPrasApi'
-lolkey2 = 'KopiLuwak'
-farhan = 'antiseleb'
+lolkey = ''
 nama = `𝑖𝑎𝑚 𝑓𝑖𝑛𝑜 菲诺𝟗𝟗𝟗`
 nama2 = `Fino Julyan Anggara`
 baterai = {
     baterai: 0,
-    cas: false
+    lse
 }
 //=================================================//
 module.exports = hexa = async (hexa, mek) => {
