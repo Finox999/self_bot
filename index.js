@@ -2,6 +2,8 @@
 //MAKASIH DAH PAKE 
 //   -    y    -    \\
 //--Recode By Fino--\\
+//Ganti nama author and creator ga bkin buat lu jago ya anjg\\
+//Kalo mau recode kasih nama gua lah (Finox999)\\
 const
 	{
 		WAConnection,
