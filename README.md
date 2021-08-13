@@ -1,5 +1,6 @@
 # self-bot1
-self bot 
+self bot Made in Me
+Base bot? [`Hexagonz`](https://github.com/hexagonz/SELF-HX)
 
 
 
