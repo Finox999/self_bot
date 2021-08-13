@@ -3,6 +3,10 @@ self bot Made in Me
 
 Base bot? [`Hexagonz`](https://github.com/hexagonz/SELF-HX)
 
+And
+
+SC NYA JANGAN DI JUAL NGENTOD
+
 # TOOLS
 * Download termux untuk install dan jalankan bot
 * Download acode untuk mengedit ownerNumber/Keperluan lain nya
