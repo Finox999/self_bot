@@ -25,6 +25,8 @@ self bot
 # Cara edit owner number
 * Download aplikasi Acode [`Disini`](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree) bebas si yg mana aja yg penting text editor)
 * Buka file index.js
+* Ke line 72,ganti nomer kalian
+* Untuk beli apikey lolhuman,klik di [`Sini`](https://api.lolhuman.xyz)
 
 #THANKS TO
 
