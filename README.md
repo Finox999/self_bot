@@ -23,16 +23,16 @@ self bot
 * Selesai
 
 # Cara edit owner number
-* Download aplikasi Acode(https://play.google.com/store/apps/details?id=com.foxdebug.acodefree) bebas si yg mana aja yg penting text editor)
+* Download aplikasi Acode [`Disini`](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree) bebas si yg mana aja yg penting text editor)
 * Buka file index.js
 
 #THANKS TO
 
- *[`@Adiwajshing/baileys`](https://github.com/Adiwajshing/baileys)
- *[`HEXAGONZ`](https://github.com/Hexagonz)
+ * [`@Adiwajshing/baileys`](https://github.com/Adiwajshing/baileys)
+ * [`HEXAGONZ`](https://github.com/Hexagonz)
 
 # Contact Me
-*[`Whatsapp`](https://wa.me/6288210864298)
-*[`Instagram`](https://instagram.com/finoooooo_)
-*[`Telegram`](https://t.me/Jeruklokal92)
+* [`Whatsapp`](https://wa.me/6288210864298)
+* [`Instagram`](https://instagram.com/finoooooo_)
+* [`Telegram`](https://t.me/Jeruklokal92)
 
