@@ -664,7 +664,7 @@ const fvn = {
      	if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
       	//if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mTEXT\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
  
-//Auto Respon 
+//Auto Respon teks
 
 if (budy.match(`Salken`,`salken`,`Slkn`,`slkn`,`Slknn`,`slknn`)) {
 reply(`Salken juga kak ${pushname} `) 
@@ -672,22 +672,14 @@ reply(`Salken juga kak ${pushname} `)
 if (budy.match(`@6288210864298`)) {
 reply(`Iya kak ${pushname} knp nge tag" owner ku? `) 
 }
-//Auto resoon suara
-if (budy.match(`I LOVE YOU`,`ILY`, `sayang`,`love you`)){
-p = fs.readFileSync('./lib/audio/i love you.mp3')
-hexa.sendMessage(from, p, audio, {quoted: fvideo,ptt: true})
+if (budy.match(`Hai`,'hai',`hi`,`Hi`,`Hay`,`hay`,`hy`)) {
+reply(`Hai juga kak ${pushname}`) 
 }
+//Auto resoon suara
+
 
 //Auto respon sticker
-if(budy.match(`bokep`,`Bokep`)){
-result = fs.readFileSync(`./lib/sticker/tobat.webp`)
-  hexa.sendMessage(from, result, sticker, {
-quoted: fvideo
-  })
-}
 if (!mek.key.fromMe && banChats === true) return
-
- hexa.updatePresence(from, Presence.recording)
 if (budy.match(`Hai`,'hai',`hi`,`Hi`,`Hay`,`hay`,`hy`)) {
 reply(`Hai juga kak ${pushname}`) 
 }
@@ -1032,8 +1024,8 @@ switch (command) {
 -𝙲𝚁𝙴𝙰𝚃𝙾𝚁 𝙻𝙰𝙸𝙽
 
 ❏ *𝙿𝚈𝚃𝙷𝙾𝙽-𝚂𝙴𝙻𝙵𝙱𝙾𝚃菲诺* ❏`
-hexa.updatePresence(from, Presence.recording)
-hexa.sendMessage(from, menu, text, { quoted: ftoko, contextInfo: { externalAdReply : { title: 'ìąʍ ƒìղօ 菲诺', body : '𝑥  999  𝑥', mediaType: 2, thumbnail: fs.readFileSync('./lib/image/heker.jpeg'), mediaUrl: 'https://youtu.be/33C7D7sBmCQ'}}})
+
+hexa.sendMessage(from, menu, text, { quoted: ftoko, contextInfo: { externalAdReply : { title: 'ìąʍ ƒìղօ 菲诺', body : '𝑥  999  𝑥', mediaType: 2, thumbnail: fs.readFileSync('./stik/thumb.jpeg'), mediaUrl: 'https://youtu.be/33C7D7sBmCQ'}}})
 break
     case 'on':
             if (!mek.key.fromMe) return 
@@ -2569,7 +2561,7 @@ case 'hari' :
 ┣➣Jam : *[ ${wit} WIT ]*
 ┣➣Jam : *[ ${wita} WITA ]*
 ┗━━━━━━━━ ❑`
-hexa.updatePresence(from, Presence.recording)
+
 hexa.sendMessage(from, waktu, text, {quoted:fvideo})
 break
 
@@ -5043,7 +5035,7 @@ case 'xox':
 					})
 					break
 case 'tts2':
-				   hexa.updatePresence(from, Presence.recording) 
+				    
 				   if (args.length < 1) return hexa.sendMessage(from, 'Kode bahasanya mana om?', text, {quoted: mek})
 					const tts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return hexa.sendMessage(from, 'Textnya mana om', text, {quoted: mek})
@@ -5530,7 +5522,7 @@ var _0x1e0df0=_0x5713;(function(_0x661686,_0xf3874f){var _0x449343=_0x5713,_0x36
         break;
 case 'menu':
  case 'button':
-var thumbnail = fs.readFileSync('./lib/image/loli1.jpeg')
+var thumbnail = fs.readFileSync('./stik/thumb.jpeg')
 		var media = await hexa.prepareMessage(from, thumbnail, MessageType.image)
 	var buttonsss = [
 		{buttonId: `${prefix}owner`, buttonText: {displayText: '👤 𝑶𝑾𝑵𝑬𝑹'}, type: 1},
