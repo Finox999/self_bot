@@ -11,7 +11,7 @@ const { color } = require('./lib/color')
 
 require('./index.js')
 nocache('./index.js', module => console.log(`${module} is now updated!`))
-
+console.log(color('Error? wa.me/6288210864298','Green))
 const starts = async (hexa = new WAConnection()) => {
 hexa.version = [2, 2119, 6]
     hexa.logger.level = 'warn'
