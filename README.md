@@ -32,7 +32,8 @@ SC NYA JANGAN DI JUAL NGENTOD
 * $pkg install bash
 * $pkg install mc(buat setting ownerNumber)
 * $git clone https://github.com/Finox999/self-bot1
-* $cd self-bot1
+* $cd self_bot
+
 * $npm install/bash install.sh(bebas yg mana aja)
 * $npm start/node index.js(bebas yg mana aja)
 * Scan kode qr nya
