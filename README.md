@@ -1,3 +1,8 @@
+### BOT ERROR GAN AOWKWOWK
+
+
+
+
 # self-bot1
 self bot Made in Me 
 
