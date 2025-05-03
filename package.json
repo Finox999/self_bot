@@ -43,7 +43,7 @@
     "tiktok-scraper-without-watermark": "^1.0.6",
     "tod-api": "^1.0.5",
     "twitter-url-direct": "^1.0.1",
-    "yt-search": "^2.7.6"
+    "yt-search": "^2.13.0"
   },
   "scripts": {
     "start": "node main",
